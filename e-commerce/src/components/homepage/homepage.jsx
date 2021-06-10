@@ -1,4 +1,5 @@
 import React from 'react'
+import './homepage.scss'
 
 const HomePage = () => (
     <div className="homepage">
@@ -11,26 +12,34 @@ const HomePage = () => (
             </div>
             <div className="directory-menue">
                 <div className="menu-item">
-                    <h1 className="title">jackets</h1>
-                    <span className="subtitle">shop now</span>
+                    <div className="content">
+                        <h1 className="title">jackets</h1>
+                        <span className="subtitle">shop now</span>
+                    </div>
                 </div>
             </div>
             <div className="directory-menue">
                 <div className="menu-item">
-                    <h1 className="title">shoes</h1>
-                    <span className="subtitle">shop now</span>
+                    <div className="content">
+                        <h1 className="title">shoes</h1>
+                        <span className="subtitle">shop now</span>
+                    </div>
                 </div>
             </div>
             <div className="directory-menue">
                 <div className="menu-item">
-                    <h1 className="title">mens</h1>
-                    <span className="subtitle">shop now</span>
+                    <div className="content">
+                        <h1 className="title">mens</h1>
+                        <span className="subtitle">shop now</span>
+                    </div>
                 </div>
             </div>
             <div className="directory-menue">
                 <div className="menu-item">
-                    <h1 className="title">womens</h1>
-                    <span className="subtitle">shop now</span>
+                    <div className="content">
+                        <h1 className="title">womens</h1>
+                        <span className="subtitle">shop now</span>
+                    </div>
                 </div>
             </div>
         </div>
