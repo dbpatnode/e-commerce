@@ -33,7 +33,7 @@ class Directory extends React.Component {
             },
             {
                 title: 'womens',
-                imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvNGPXm-M8Kn-hq3_862EyuEi4OLSN1lQIVA&usqp=CAU',
+                imageUrl: 'https://media-spring.cabionline.com/wp-content/uploads/cabi-templates/s21/looks/casual-1.jpg',
                 id: 6
             }]
         }
