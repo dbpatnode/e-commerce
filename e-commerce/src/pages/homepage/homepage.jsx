@@ -5,11 +5,6 @@ import './homepage.scss'
 const HomePage = () => (
     <div>
         <Directory />
-        {/* //     <MenuItem />
-    //     <MenuItem />
-    //     <MenuItem />
-    //     <MenuItem />
-    //     <MenuItem /> */}
     </div>
 );
 
