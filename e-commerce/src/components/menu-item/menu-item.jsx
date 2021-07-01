@@ -8,7 +8,6 @@ const MenuItem = ({ title, imageUrl, history, linkUrl, match }) => (
         className="menu-item"
         onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
-        {console.log(match.url)}
         <div
             className="background-image"
             style={{
@@ -22,7 +21,7 @@ const MenuItem = ({ title, imageUrl, history, linkUrl, match }) => (
     </div>
 );
 
-// wrapping withRouter around our component gives us acsecess to the history and math props
+// wrapping withRouter around our component gives us access to the history and math props
 // assuming we've set up BrowserRouter in index.js and the Swith / Routes in
 // App.js  
 export default withRouter(MenuItem);
