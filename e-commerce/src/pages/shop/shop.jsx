@@ -12,7 +12,6 @@ class ShopPage extends React.Component {
             <div className="shop-page">
                 {
                     this.state.clothingCollection.map(clothing => (
-
                         <CollectionPreview
                             key={clothing.id}
                             title={clothing.title}
@@ -21,7 +20,6 @@ class ShopPage extends React.Component {
                         />
                     ))
                 }
-
             </div>
         )
     }
