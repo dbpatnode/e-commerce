@@ -1,5 +1,6 @@
 import React from 'react'
 import FormInput from '../form-input/form-input.jsx'
+import CustomButton from '../custom-button/custom-button.jsx'
 import './sign-in.scss'
 
 class SignIn extends React.Component {
@@ -45,8 +46,12 @@ class SignIn extends React.Component {
                         label="password"
                     />
 
-                    <input type="submit" value="Sign In" />
-                    <input type="submit" value="Sign In With Google" />
+                    <CustomButton
+                        type="submit"
+                    >
+                        {/* anything within here is children. */}
+                        Sign In
+                    </CustomButton>
                 </form>
             </div >
         )
