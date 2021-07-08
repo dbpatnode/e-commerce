@@ -12,7 +12,6 @@ const CustomButton = ({ children, type, value }) => (
     <button
         className="custom-button"
         type={type}
-
     >
         {children}
     </button>
