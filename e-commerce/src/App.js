@@ -4,12 +4,31 @@ import HomePage from '../src/pages/homepage/homepage.jsx'
 import ShopPage from '../src/pages/shop/shop.jsx'
 import LoginAndSignupPage from '../src/pages/login-and-signup-page/login-and-signup-page.jsx'
 import Header from '../src/components/header/header.jsx'
+import { auth } from '../src/firebase/firebase.utils';
 
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  
+  state = {
+    currentUser: null
+  }
+  // firebase fun!!
+  unsubscribeFromAuth = null
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( user => {
+      this.setState({ currentUser: user});
+      console.log(user);
+    })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
   return (
-    
     <div>
       <Header/>
       <Switch> 
@@ -20,6 +39,7 @@ function App() {
       
     </div>
   );
+  }
 }
 
 export default App;
