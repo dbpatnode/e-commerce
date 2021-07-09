@@ -1,7 +1,12 @@
 import React from 'react'
 import FormInput from '../form-input/form-input.jsx'
 import CustomButton from '../custom-button/custom-button.jsx'
+import '../custom-button/custom-button.scss'
+
+import { signInWithGoogle } from '../../firebase/firebase.utils.js'
 import './sign-in.scss'
+
+
 
 class SignIn extends React.Component {
 
@@ -31,7 +36,7 @@ class SignIn extends React.Component {
                     <FormInput
                         name="email"
                         type="email"
-                        value={this.state.email}
+                        defaultValue={this.state.email}
                         handleChange={this.handleChange}
                         required
                         label="email"
@@ -40,7 +45,7 @@ class SignIn extends React.Component {
                     <FormInput
                         name="password"
                         type="password"
-                        value={this.state.password}
+                        defaultValue={this.state.password}
                         handleChange={this.handleChange}
                         required
                         label="password"
@@ -52,6 +57,12 @@ class SignIn extends React.Component {
                         {/* anything within here is children. */}
                         Sign In
                     </CustomButton>
+                    <button className="custom-button"
+                        onClick={signInWithGoogle}
+                    >
+                        {/* anything within here is children. */}
+                        Sign In With Google
+                    </button>
                 </form>
             </div >
         )

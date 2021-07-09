@@ -1,7 +1,7 @@
 import React from 'react'
 import './custom-button.scss'
 
-const CustomButton = ({ children, type, value }) => (
+const CustomButton = ({ children, type, signInWithGoogle }) => (
     // <div className="custom-button-container">
     // <input
     //     className="custom-button"
@@ -12,6 +12,7 @@ const CustomButton = ({ children, type, value }) => (
     <button
         className="custom-button"
         type={type}
+
     >
         {children}
     </button>
