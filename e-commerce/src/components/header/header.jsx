@@ -1,19 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utils';
 import './header.scss';
-import Logo from '../../assets/cube.png'
+import Logo from '../../assets/cube.png';
 
-const Header = () => (
+const Header = ({ currentUser }) => (
     <div className="header">
         <Link to="/" className="logo-container">
             <img src={Logo} alt="logo"></img>
         </Link>
 
         <div className="options">
-            <Link to="/shop" className="option">SHOP</Link>
-            <Link to="/contact" className="option">CONTACT</Link>
+            <Link to="/shop" className="option">
+                SHOP
+            </Link>
+            <Link to="/contact" className="option">
+                CONTACT
+            </Link>
+            {
+                currentUser ?
+                    <div
+                        className="option"
+                        onClick={() => auth.signOut()}
+                    >
+                        SIGN OUT
+                    </div>
+                    :
+                    <Link to="/signin" className="option">SIGN IN</Link>
+                // null
+            }
         </div>
-    </div>
+    </div >
 )
 
 export default Header
