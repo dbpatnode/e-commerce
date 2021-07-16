@@ -50,19 +50,20 @@ class SignIn extends React.Component {
                         required
                         label="password"
                     />
-
-                    <CustomButton
-                        type="submit"
-                    >
-                        {/* anything within here is children. */}
-                        Sign In
-                    </CustomButton>
-                    <button className="custom-button"
-                        onClick={signInWithGoogle}
-                    >
-                        {/* anything within here is children. */}
-                        Sign In With Google
-                    </button>
+                    <div className="buttons">
+                        <CustomButton
+                            type="submit"
+                        >
+                            {/* anything within here is children. */}
+                            Sign In
+                        </CustomButton>
+                        <button className="custom-button google"
+                            onClick={signInWithGoogle}
+                        >
+                            {/* anything within here is children. */}
+                            Sign In With Google
+                        </button>
+                    </div>
                 </form>
             </div >
         )

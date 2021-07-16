@@ -1,7 +1,7 @@
 import React from 'react'
 import './custom-button.scss'
 
-const CustomButton = ({ children, type, signInWithGoogle }) => (
+const CustomButton = ({ children, type, className }) => (
     // <div className="custom-button-container">
     // <input
     //     className="custom-button"
