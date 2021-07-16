@@ -14,6 +14,7 @@ a {
   color: black;
 }
 
+/* this makes all things line up within the div that they're in */
 * {
   box-sizing: border-box;
 }
